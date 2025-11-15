@@ -1,9 +1,43 @@
 [gd_scene load_steps=2 format=3 uid="uid://bbo1li5mglkja"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_7dm0k"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7dm0k"]
 
 [node name="main" type="Node3D"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1604687, 0.047968626, 0.057802916)
-mesh = SubResource("BoxMesh_7dm0k")
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049999736, 0.4500001, -0.9699999)
+material_override = SubResource("StandardMaterial3D_7dm0k")
+use_collision = true
+size = Vector3(13, 1.5, 13.1)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1.2, 0, 0, 0, 1, 0, 0, 0, 1, -3.3, 3, -0.75)
+size = Vector3(0.7, 3.6000001, 5.4)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGBox3D2"]
+transform = Transform3D(1.7259448e-15, -1, -6.993823e-08, 2.5500002, 5.3290705e-15, -7.152557e-08, 1.1399389e-07, -4.3711395e-08, 1.5999999, -0.048437595, -0.9000001, 0)
+operation = 2
+radius = 0.9
+height = 1.890625
+sides = 35
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05000007, 3.0000002, 2.4)
+use_collision = true
+size = Vector3(7.5, 3.6000001, 1)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4, 4.4, 0)
+height = 6.4
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 1.8, -1.5)
+radius = 0.8
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05000007, 3, -3.9500003)
+size = Vector3(7.3, 3.6000001, 1.1)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 3.0000002, -0.8000002)
+size = Vector3(1, 3.6000001, 7.4)
